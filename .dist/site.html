@@ -4,37 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>webblesite</title>
-
+    <title>WebbleSite</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
 </head>
-<body>
-    <H1> WebbleSite </H1>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="https://steamcommunity.com/id/sillypantsman/">steam</a></li>
-                <li><a href="www.linkedin.com/in/nathan-duprix-ab387b362">linkdin</a></li>
-                <li><a href="https://github.com/nathhandup">github</a></li>
-                <li><a href="https://open.spotify.com/user/djwqadjkbjkdn81r48umdw8az?si=c6d705ac0e3d480c">spotify</a></li>
-                <li><a href="">e</a></li>
-            </ul>
+
+<script>
+function openPopup(message) {
+    document.getElementById("popup-text").innerText = message;
+
+    const popup = document.getElementById("popup-overlay");
+    popup.classList.add("active");  
+
+    document.getElementById("page-content").classList.add("blur");
+}
+
+function closePopup() {
+    const popup = document.getElementById("popup-overlay");
+    popup.classList.remove("active"); 
+
+    document.getElementById("page-content").classList.remove("blur");
+}
+</script>
+
+<body id="main-body">
+    <div id="page-content">
+        <nav id="top-bar" class="navigation"> 
+            <h2><a class="navbutton" onclick="openPopup('Links section coming soon')"> Links </a></h2>
+            <h2><a class="navbutton" onclick="openPopup('Changelog updates here')"> Changelog </a></h2>
+            <h1 onclick="openPopup('Welcome to WebbleSite!')"> WebbleSite </h1>
+            <h2><a class="navbutton" onclick="openPopup('Corkboard content here')"> Corkboard </a></h2>
+            <h2><a class="navbutton" onclick="openPopup('Info about this site')"> Info </a></h2>
         </nav>
-    </header>
-    <main>
-        <p> 
-            This is my website, where I will be putting all of my 
-            links and cool things. Check out my stuff and things!
-        </p>
-        <button class="black-button" onclick="alert('hello')"> 
-            Button
-        </button>
-    </main>
-    <footer> 
-        <p>
-            Giant Monster!!
-        </p>
-    </footer>
+        <header>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="https://steamcommunity.com/id/sillypantsman/">steam</a></li>
+                    <li><a href="www.linkedin.com/in/nathan-duprix-ab387b362">linkdin</a></li>
+                    <li><a href="https://github.com/nathhandup">github</a></li>
+                    <li><a href="https://open.spotify.com/user/djwqadjkbjkdn81r48umdw8az?si=c6d705ac0e3d480c">spotify</a></li>
+                    <li><a href="https://28awesomebugs.org/">28awesomebugs.org</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <p> 
+                This is my website. Giant monster.
+            </p>
+            <button class="black-button" onclick="alert('hello giant monster')"> 
+                Button
+            </button>
+        </main>
+        <footer> 
+            <p>
+                Giant Monster!!
+            </p>
+        </footer>
+    </div>
+
+    <div id="popup-overlay" class="hidden">
+    <div id="popup-box">
+        <p id="popup-text"></p>
+        <button onclick="closePopup()">Close</button>
+    </div>
+
+</div>
 </body>
 </html>
