@@ -2,6 +2,8 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
+    overflow: hidden;
+    color:white;
 }
 
 .black-button {
@@ -10,31 +12,43 @@ html, body {
     border-color : green;
 }
 
-#top-bar {
-    border-style: solid;
-    border-color: black;
-    background: grey;
-    color:white;
+#nav-background {
+    width: 100%;
+    height: 100%;
+    background: rgb(103,100,50);
+    border-bottom: 3px solid rgb(0, 0, 0);
+
+    display: flex;
+    justify-content: center; 
+    padding: 10px 0;
+}
+
+#link-container {
+    display: inline-block;
+    color: white;
+}
+
+
+#link-container {
+    border-radius: 5vw;
+    border-style:outset;
+    border-color: rgb(3,56,32);
+    background: rgb(3,56,32);
+
     text-align: center;
     width:fit-content;
 
-    position: relative;
-    left: 25%;
-    top: 5%;
-    
-
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+   
     padding-top: 5px;
     padding-left: 5px;
     padding-right: 5px;
     padding-bottom: 5px;
 }
 
-.navigation h1 {
-    display: inline;
-    margin: 0 10px;
-}
-
-.navigation h2 {
+.navigation h1, h2 {
     display: inline;
     margin: 0 10px;
 }
@@ -44,10 +58,8 @@ html, body {
     margin: 0 10px;
 }
 
-
-
 #main-body {
-    background: #6B4F4F;
+    background: rgb(69,89,37);
 }
 
 /* Blur effect */
@@ -62,7 +74,7 @@ html, body {
 
 #popup-overlay {
     position: fixed;
-    inset: 0; /* 👈 better than top/left/width/height */
+    inset: 0; 
 
     background: rgba(0, 0, 0, 0.5);
 
@@ -70,7 +82,7 @@ html, body {
     justify-content: center;
     align-items: center;
 
-    z-index: 9999; /* ensure it's on top */
+    z-index: 9999; 
 }
 
 /* when active */
@@ -89,6 +101,5 @@ html, body {
 
     max-height: 80vh;
     overflow-y: auto;
-}
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
