@@ -1,75 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Website</title>
     <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <script src="./js/popup.js" defer></script>
+    <script src="./js/windows.js" defer></script>
+    <script src="./js/changelog.js" defer></script>
 </head>
 
-<script>
-function openPopup(content) {
-    document.getElementById("popup-text").innerHTML = content;
 
-    const popup = document.getElementById("popup-overlay");
-    popup.classList.add("active");  
-
-    document.getElementById("page-content").classList.add("blur");
-}
-
-function closePopup() {
-    const popup = document.getElementById("popup-overlay");
-    popup.classList.remove("active"); 
-
-    document.getElementById("page-content").classList.remove("blur");
-}
-</script>
-
-<body id="main-body">
-    <div id="page-content">
-        <header class="navigation"> 
-            <div id="nav-background"> 
-                <div id="link-container">
-                    <h2><a class="navbutton" onclick="openPopup(`
-                        <h3>My Links</h3>
-                        <ul style='text-align: left'>
-                            <li><a href='https://steamcommunity.com/id/sillypantsman/' target='_blank'>Steam</a></li>
-                            <li><a href='https://www.linkedin.com/in/nathan-duprix-ab387b362' target='_blank'>LinkedIn</a></li>
-                            <li><a href='https://github.com/nathhandup' target='_blank'>GitHub</a></li>
-                            <li><a href='https://open.spotify.com/user/djwqadjkbjkdn81r48umdw8az' target='_blank'>Spotify</a></li>
-                            <li><a href='https://28awesomebugs.org/' target='_blank'>28awesomebugs</a></li>
-                        </ul>
-                    `)"> Links </a></h2>
-                    <h2><a class="navbutton" onclick="openPopup('Changelog updates here')"> Changelog </a></h2>
-                    <h1 onclick="openPopup('Welcome to website!')"> Website </h1>
-                    <h2><a class="navbutton" onclick="openPopup('Corkboard content here')"> Corkboard </a></h2>
-                    <h2><a class="navbutton" onclick="openPopup('Info about this site')"> Info </a></h2>
-                </div>
-            </div>
+<body>
+<div id="page-content">
+    <div id="site-wrapper">
+        <header>
+            <h1 id="site-title">Website</h1>
+            <nav id="navbar">
+                <a onclick="openWindow('links-window')">Links</a>
+                <a onclick="openWindow('changelog-window')">Changelog</a>
+                <a onclick="openWindow('games-window')">Games</a>
+                <a onclick="openWindow('corkboard-window')">Corkboard</a>
+                <a onclick="openWindow('info-window')">Info</a>
+            </nav>
         </header>
+
         <main>
-            <p> 
-                This is my website. Giant monster.
-            </p>
-            <button class="black-button" onclick="alert('hello giant monster')"> 
-                Button
-            </button>
+            <section class="content-box">
+                <h2>Welcome</h2>
+                <p>This is my website. Giant monster.</p>
+
+                <button class="retro-button"
+                    onclick="alert('hello giant monster')">
+                    Button
+                </button>
+            </section>
         </main>
-        <footer> 
-            <p>
-                Giant Monster!!
-            </p>
+
+        <div class="gif-strip">
+
+            <img src="./gifs/gif1.gif" alt="gif1">
+            <img src="./gifs/gif2.gif" alt="gif2">
+            <img src="./gifs/getfirefox.gif" alt="gif3">
+            <img src="./gifs/coffee.gif" alt="gif4">
+        </div>
+
+        <footer>
+            Giant Monster!!
         </footer>
-    </div>
 
-    <div id="popup-overlay" class="hidden">
+    </div>
+</div>
+
+
+<div id="popup-overlay">
     <div id="popup-box">
-        <p id="popup-text"></p>
-        <button onclick="closePopup()">Close</button>
+        <div id="popup-text"></div>
+        <button class="retro-button" onclick="closePopup()">
+            Close
+        </button>
+    </div>
+</div>
+
+<div class="desktop-window" id="links-window">
+    <div class="window-header">
+        <span>Links</span>
+        <button class="close-btn" onclick="closeWindow('links-window')">X</button>
     </div>
 
+    <div class="window-content">
+        <ul>
+            <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+            <li><a href="https://steamcommunity.com/" target="_blank">Steam</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="desktop-window" id="changelog-window">
+    <div class="window-header">
+        <span>Changelog</span>
+        <button class="close-btn" onclick="closeWindow('changelog-window')">X</button>
+    </div>
+
+    <div class="window-content">
+
+        <div id="changelog-container">
+            Loading changelog...
+        </div>
+
+    </div>
+</div>
+
+<div class="desktop-window" id="games-window">
+    <div class="window-header">
+        <span>Games</span>
+        <button class="close-btn" onclick="closeWindow('games-window')">X</button>
+    </div>
+
+    <div class="window-content">
+        <p>Games section here.</p>
+    </div>
+</div>
+
+<div class="desktop-window" id="corkboard-window">
+    <div class="window-header">
+        <span>Corkboard</span>
+        <button class="close-btn" onclick="closeWindow('corkboard-window')">X</button>
+    </div>
+
+    <div class="window-content">
+        <p>Corkboard notes.</p>
+    </div>
+</div>
+
+<div class="desktop-window" id="info-window">
+    <div class="window-header">
+        <span>Info</span>
+        <button class="close-btn" onclick="closeWindow('info-window')">X</button>
+    </div>
+
+    <div class="window-content">
+        <p>Info about the site.</p>
+    </div>
 </div>
 </body>
 </html>

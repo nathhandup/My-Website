@@ -1,0 +1,19 @@
+[
+    {
+        "title": "Website Launch",
+        "date": "2026-05-26",
+        "content": "Initial release of the website."
+    },
+
+    {
+        "title": "Desktop Windows",
+        "date": "2026-05-27",
+        "content": "Added draggable desktop-style windows."
+    },
+
+    {
+        "title": "Games Tab",
+        "date": "2026-05-28",
+        "content": "Added games section to navbar."
+    }
+]
