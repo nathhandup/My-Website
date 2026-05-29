@@ -6,7 +6,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-/* DATABASE */
 const db = new sqlite3.Database("messages.db");
 
 db.run(`
@@ -37,7 +36,7 @@ app.post("/message", (req, res) => {
     );
 });
 
-/* GET MESSAGES (optional admin view) */
+/* GET MESSAGES */
 app.get("/messages", (req, res) => {
 
     db.all(
