@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webblesite</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/x-icon" href="./img/logo.png">
+    <script src="./js/popup.js" defer></script>
+    <script src="./js/windows.js" defer></script>
+    <script src="./js/changelog.js" defer></script>
+    <script src="./js/draw.js" defer></script>
+    <script src="./js/admin.js" defer></script>
+    <script src="./js/messages.js" defer></script>
+</head>
+
+
+<body>
+<div id="page-content">
+    <div id="site-wrapper">
+        <header>
+            <h1 id="site-title">Webblesite</h1>
+            <nav id="navbar">
+                <a onclick="openWindow('links-window')">Links</a>
+                <a onclick="openWindow('changelog-window')">Changelog</a>
+                <a onclick="openWindow('message-window')">Message </a>
+                <a onclick="openWindow('games-window')">Games</a>
+                <a onclick="openWindow('draw-window')">Draw</a>
+                <a onclick="openWindow('info-window')">Info</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="content-box">
+                <h2>Welcome</h2>
+                <p>This is my website. Giant monster.</p>
+
+                <button class="retro-button"
+                    onclick="alert('hello giant monster')">
+                    Button
+                </button>
+            </section>
+        </main>
+        <div> Cat images </div>
+        <div> Cat images </div>
+        <div> Cat images </div>
+        <div> Cat images </div>
+        <footer>
+            Giant Monster!!
+        </footer>
+
+    </div>
+
+    <div class="gif-strip">
+            <a href="https://www.videogames.com" target="_blank"> 
+                <img src="./gifs/gif1.gif" alt="gif1"> 
+            </a>
+            <img src="./gifs/gif2.gif" alt="gif2">
+            <img src="./gifs/gif3.gif" alt="gif3">
+            <img src="./gifs/gif4.gif" alt="gif4">
+            <a href="https://en.wikipedia.org/wiki/Area_51" target="_blank"> 
+                <img src="./gifs/gif5.gif" alt="gif5"> 
+            </a>
+            <img src="./gifs/gif6.gif" alt="gif6">
+    </div>
+</div>
+
+
+<div id="popup-overlay">
+    <div id="popup-box">
+        <div id="popup-text"></div>
+        <button class="retro-button" onclick="closePopup()">
+            Close
+        </button>
+    </div>
+</div>
+
+<div class="desktop-window" id="links-window">
+    <div class="window-header">
+        <span>Links</span>
+        <button class="close-btn" onclick="closeWindow('links-window')">X</button>
+    </div>
+
+    <div class="window-content">
+        <ul>
+            <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+             <li><a href="https://steamcommunity.com/" target="_blank">Spotify</a></li>
+              <li><a href="https://steamcommunity.com/" target="_blank">Leetcode (yuck)</a></li>
+               <li><a href="https://steamcommunity.com/" target="_blank">LinkdIn (yuck) </a></li>
+            <li><a href="https://steamcommunity.com/" target="_blank">Steam</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="desktop-window" id="changelog-window">
+    <div class="window-header">
+        <span>Changelog</span>
+        <button class="close-btn" onclick="closeWindow('changelog-window')">X</button>
+    </div>
+
+    <div class="window-content">
+
+        <div id="changelog-container">
+            Loading changelog...
+        </div>
+
+    </div>
+</div>
+
+<div class="desktop-window" id="message-window">
+
+    <div class="window-header">
+
+        <span>Send Message</span>
+
+        <button class="close-btn"
+            onclick="closeWindow('message-window')">
+            X
+        </button>
+
+    </div>
+
+    <div class="window-content">
+
+        <form id="msg-form">
+
+            <input type="text" id="name" placeholder="Name" required>
+
+            <textarea id="message" placeholder="Message" required></textarea>
+
+            <button type="submit">Send</button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<div class="desktop-window" id="games-window">
+    <div class="window-header">
+        <span>Games</span>
+        <button class="close-btn" onclick="closeWindow('games-window')">X</button>
+    </div>
+
+    <div class="window-content">
+        <p>Games section here.</p>
+    </div>
+</div>
+
+<div class="desktop-window" id="draw-window">
+
+    <div class="window-header">
+
+        <span>Draw</span>
+
+        <button class="close-btn"
+            onclick="closeWindow('draw-window')">
+            X
+        </button>
+
+    </div>
+
+    <div class="window-content draw-content">
+
+        <div class="color-toolbar">
+
+            <button class="color-btn"
+                style="background:red"
+                onclick="setColor('red')">
+            </button>
+
+            <button class="color-btn"
+                style="background:blue"
+                onclick="setColor('blue')">
+            </button>
+
+            <button class="color-btn"
+                style="background:green"
+                onclick="setColor('green')">
+            </button>
+
+            <button class="color-btn"
+                style="background:black"
+                onclick="setColor('black')">
+            </button>
+
+            <button class="color-btn"
+                style="background:white; border:1px solid black"
+                onclick="setColor('white')">
+            </button>
+
+            <button class="erase-btn"
+                onclick="clearCanvas()">
+                Clear
+            </button>
+
+        </div>
+
+        <canvas id="drawing-canvas"
+            width="260"
+            height="180">
+        </canvas>
+
+    </div>
+
+</div>
+
+<div class="desktop-window" id="info-window">
+    <div class="window-header">
+        <span>Info</span>
+        <button class="close-btn" onclick="closeWindow('info-window')">X</button>
+    </div>
+
+    <div class="window-content">
+        <p>this is my website and it is my website so this is my website</p>
+    </div>
+</div>
+</body>
+</html>
