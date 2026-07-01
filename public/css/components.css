@@ -1,5 +1,16 @@
 /* ---- gif strip ---- */
 
+.paper-main-box {
+    background: var(--color-paper);
+
+    border:
+        3px solid var(--color-border);
+
+    box-shadow:
+        var(--shadow-paper);
+    padding: clamp(1rem, 3vw, 1.5rem);
+}   
+
 .gif-strip {
 
     width: min(100%, 820px); 

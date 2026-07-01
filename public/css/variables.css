@@ -1,15 +1,19 @@
 :root {
-    --color-page-bg-top: #3a6ea5;
-    --color-page-bg-middle: #5c8fd6;
-    --color-page-bg-bottom: #7fb2ff;
+    --color-page-bg-top: #006bde;
+    --color-page-bg-middle: #17113d;
+    --color-page-bg-bottom: #006bde;
 
-    --color-window-blue: #245edb;
-    --color-window-blue-light: #4d8ff0;
+    --color-window-top: #9201c3;
+    --color-window-middle: #24081f;
+    --color-window-bottom: #693c7b;
 
-    --color-border: #7aa7e0;
+    --color-border: #7aa6e0;
 
-    --color-paper: #f3f7ff;
-    --color-window: #ece9d8;
+    /* this is the main window bg */
+    --color-paper: #ffffff;
+
+    /* popup window bg */
+    --color-window: #ffffff;
 
     --color-text: #222;
     --color-text-dark: #243018;
@@ -26,13 +30,13 @@
     --radius-md: 8px;
 
     --shadow-window:
-        0 0 0 1px white,
-        8px 8px 20px rgba(0,0,0,.35);
+        0 0 0 1px rgb(0, 0, 0),
+        8px 8px 20px rgba(0, 0, 0, 0.46);
 
     --shadow-paper:
-        0 0 0 2px white,
+        0 0 0 2px rgb(126, 120, 186),
         8px 8px 18px rgba(0,0,0,.3);
 
     --font-main: "VT323", monospace;
-    --font-title: "Retro Floral", cursive;     
+    --font-title: "Retro Floral";     
 }

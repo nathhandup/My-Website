@@ -1,19 +1,25 @@
 #navbar {
     margin-top: 1rem;
+
+    margin: 0.75rem 0.1rem 0.15rem 0.1rem;
+
     background:
         linear-gradient(
             to bottom,
-            #3b7ad9,
-            var(--color-window-blue)
+            var(--color-page-bg-top),
+            var(--color-page-bg-middle),
+            var(--color-page-bg-bottom)
         );
 
     padding: clamp(0.75rem, 1.5vw, 1rem);
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    font-size: 17px;
 
-    gap: clamp(0.75rem, 2vw, 1.2rem);
+    display:flex;
+
+    flex-direction: column;
+
+    gap: var(--space-sm);
 
     border-top:
         1px solid #8fc3ff;
@@ -29,8 +35,8 @@
     margin: 0.25rem;
     padding: 0.35rem 0.75rem;
 
-    color: white;
-    text-align: center;
+    color: rgb(255, 255, 255);
+    text-align: left;
     text-decoration: none;
 
     border-radius: var(--radius-sm);
@@ -44,7 +50,7 @@
 }
 
 #navbar a:hover {
-    background: rgba(255,255,255,0.25);
+    background: rgba(0, 0, 0, 0.6);
 }
 
 #navbar a:active {

@@ -1,23 +1,28 @@
 #site-wrapper {
     width: clamp(320px, 90vw, 720px);
+    margin: 2rem 2rem 2rem 1.5rem;
+    flex: 1;
+    height: 80vh;
+}
 
-    margin: 2rem auto;
-
-    background: var(--color-paper);
-
-    border:
-        3px solid var(--color-border);
-
-    box-shadow:
-        var(--shadow-paper);
-    padding: clamp(1rem, 3vw, 1.5rem);
+#main-layout {
+    display:flex;
 }
 
 header {
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    margin-bottom: var(--space-xl);
+    background-color: #ffffffee;
+
+    margin-top: var(--space-xl);
+    margin-left: var(--space-lg);
+
     border-bottom: 2px solid #7c7358;
+    padding-top: 15px;
     padding-bottom: 15px;
+    width: clamp(180px, 18vw, 260px);
+    height: 80vh;
 }
 
 #site-title {
