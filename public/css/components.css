@@ -1,0 +1,163 @@
+/* ---- gif strip ---- */
+
+.gif-strip {
+
+    width: min(100%, 820px); 
+
+    margin: 0 auto;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 6px;
+
+    padding-bottom: var(--space-md);
+
+    overflow-x: auto;
+}
+
+.gif-strip a {
+    display: inline-block;
+}
+
+.gif-strip img {
+    
+    height: clamp(24px, 4vw, 40px);
+
+    width: auto;
+
+    image-rendering: pixelated;
+
+    flex-shrink: 0;
+
+    transition: transform 0.12s;
+}
+
+.gif-strip a:hover img {
+
+    transform: scale(1.08);
+
+    cursor: pointer;
+}
+
+.blur {
+    filter: blur(3px);
+}
+
+.update-entry {
+    margin-bottom: var(--space-md); 
+    
+    padding: var(--space-md);
+
+    background: #ece6d6;
+
+    border: 2px solid #8b8163;
+
+    line-height: 1.4; /* removes giant gaps */
+}
+
+.update-entry h3 {
+    margin: 0 0 var(--space-xs) 0; 
+    font-size: 1.05rem;
+}
+
+.update-entry small {
+    display: block;
+    margin-bottom: 6px;
+    color: #555;
+}
+
+.update-entry p {
+    margin: 0 0 2px;
+}
+
+.retro-button {
+
+    background:
+        linear-gradient(
+            to bottom,
+            #ffffff,
+            #dbe9ff
+        );
+
+    border: 1px solid var(--color-border);
+
+    padding: 0.5rem 0.85rem;
+
+    cursor: pointer;
+
+    font-family: inherit;
+}
+
+.retro-button:hover {
+
+    background:
+        linear-gradient(
+            to bottom,
+            #ffffff,
+            #c6dcff
+        );
+}
+
+.retro-button:active {
+    border-style: inset;
+}
+
+.content-box {
+
+    background: white;
+
+    border:
+        2px solid var(--color-border);
+
+    padding: clamp(0.9rem, 2vw, 1.2rem);
+
+    margin: clamp(0.75rem, 2vw, 1.25rem);
+
+    box-shadow:
+        inset 0 0 0 1px #ffffff;
+}
+
+.content-box h2 {
+    margin-top: 0;
+    color: #2f3724;
+    border-bottom: 1px solid #a69b7b;
+    padding-bottom: 6px;
+}
+
+#popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+#popup-box {
+    width: clamp(280px, 90vw, 400px);
+    background: #e7dfcc;
+    border: var(--space-xs) solid #5c563f;
+    padding: clamp(1rem, 2vw, 1.5rem);
+    box-shadow: var(--space-md) var(--space-md) 0 rgba(0,0,0,0.3);
+    color: var(--color-text);
+}
+
+#popup-overlay.active {
+    display: flex;
+}
+
+#popup-box ul {
+    padding-left: var(--space-lg);
+}
+
+#popup-box a {
+    color: #2e4d8f;
+}
+
+.blur {
+    filter: blur(3px);
+}

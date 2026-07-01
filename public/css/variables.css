@@ -1,0 +1,38 @@
+:root {
+    --color-page-bg-top: #3a6ea5;
+    --color-page-bg-middle: #5c8fd6;
+    --color-page-bg-bottom: #7fb2ff;
+
+    --color-window-blue: #245edb;
+    --color-window-blue-light: #4d8ff0;
+
+    --color-border: #7aa7e0;
+
+    --color-paper: #f3f7ff;
+    --color-window: #ece9d8;
+
+    --color-text: #222;
+    --color-text-dark: #243018;
+
+    --color-button: #ddd;
+
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md: 10px;
+    --space-lg: 20px;
+    --space-xl: 30px;
+
+    --radius-sm: 4px;
+    --radius-md: 8px;
+
+    --shadow-window:
+        0 0 0 1px white,
+        8px 8px 20px rgba(0,0,0,.35);
+
+    --shadow-paper:
+        0 0 0 2px white,
+        8px 8px 18px rgba(0,0,0,.3);
+
+    --font-main: "VT323", monospace;
+    --font-title: "Retro Floral", cursive;     
+}

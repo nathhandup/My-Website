@@ -1,0 +1,51 @@
+/* ---- reset ---- */
+
+* {
+    box-sizing: border-box;
+}
+
+/* ---- doc ---- */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: 
+        linear-gradient(
+            to bottom, 
+            var(--color-page-bg-top),
+            var(--color-page-bg-middle),
+            var(--color-page-bg-bottom)
+        );
+
+    color: var(--color-text);
+    font-family: var(--font-main);
+    font-size: clamp(0.95rem, 1vw, 1rem);
+    overflow: hidden;
+}
+
+/* ---- forms ---- */
+
+form {
+    display: flex;
+    flex-direction: column;
+
+    gap: var(--space-md);
+}
+
+form input,
+form textarea {
+    padding: var(--space-sm);
+
+    border:
+        2px solid var(--color-border);
+
+    font-family: inherit;
+
+    resize: none;
+}
+
+form textarea {
+    height: 120px;
+}

@@ -1,0 +1,64 @@
+.draw-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: var(--space-md);
+}
+
+.color-toolbar {
+
+    display: flex;
+
+    gap: 6px;
+}
+
+.color-btn {
+    width: clamp(1.2rem, 3vw, 1.5rem);
+    height: clamp(1.2rem, 3vw, 1.5rem);
+
+    border: 2px solid #444;
+
+    cursor: pointer;
+
+    padding: 0;
+}
+
+#drawing-canvas {
+
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    aspect-ratio: 260 / 180;
+
+    background: white;
+
+    border: 2px inset #666;
+
+    cursor: crosshair;
+
+    image-rendering: pixelated;
+}
+
+.erase-btn {
+
+    padding: var(--space-xs) var(--space-sm);
+
+    background: var(--color-button);
+
+    border: 2px outset #999;
+
+    cursor: pointer;
+
+    font-size: 0.8rem;
+}
+
+.erase-btn:active {
+    border-style: inset;
+}
+
+
+

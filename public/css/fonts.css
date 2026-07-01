@@ -1,0 +1,7 @@
+@font-face {
+    font-family: var(--font-title);
+    src: url("./fonts/RetroFloral.ttf")
+        format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}

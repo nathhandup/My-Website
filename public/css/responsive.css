@@ -1,0 +1,46 @@
+@media (max-width: 540px) {
+    #site-wrapper {
+        margin: 1rem auto;
+        padding: 1rem;
+    }
+    #site-title {
+        font-size: clamp(1.8rem, 8vw, 2.5rem);
+    }
+
+    #navbar {
+        gap: 0.5rem;
+        padding: 0.6rem;
+    }
+
+    #navbar a {
+        padding: 0.5rem 0.85rem;
+        min-width: auto;
+    }
+
+    .content-box {
+        margin: 0.75rem 0;
+    }
+
+    .gif-strip {
+        gap: 0.4rem;
+        padding-bottom: 0.75rem;
+    }
+
+    .desktop-window {
+        width: min(90vw, 320px);
+        height: auto;
+        max-height: 85vh;
+    }  
+
+    .window-header {
+        padding: 0.65rem 0.8rem;
+    }
+
+    .window-content {
+        padding: 0.8rem;
+    }
+
+    form textarea {
+        min-height: 8rem;
+    }
+}

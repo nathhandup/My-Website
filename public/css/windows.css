@@ -1,0 +1,116 @@
+
+.desktop-window {
+
+   
+    position: fixed;
+
+    width: clamp(260px, 80vw, 320px);
+    height: clamp(220px, 45vh, 360px);
+    max-height: 80vh;
+
+    background: var(--color-window);
+
+    border:
+        2px solid var(--color-window-blue);
+
+    box-shadow:
+        var(--shadow-window);
+
+    display: none;
+
+    z-index: 1000;
+
+    overflow: hidden;
+
+    border-radius: var(--radius-md);
+}
+
+/* TITLE BAR */
+
+.window-header {
+     background:
+        linear-gradient(
+            to bottom,
+            var(--color-window-blue-light),
+            #2f6fdf 45%,
+            var(--color-window-blue)
+        );
+
+    color: white;
+
+    padding: 6px var(--space-md);
+
+    cursor: move;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    user-select: none;
+
+    font-weight: bold;
+
+    border-bottom:
+        1px solid #163f91;
+}
+
+/* CONTENT */
+
+.window-content {
+    height: calc(100% - 40px); /* header height compensation */
+    overflow-y: auto;
+    padding: var(--space-md);
+    color: var(--color-text);
+}
+
+/* CLOSE BUTTON */
+
+.close-btn {
+
+    background:
+        linear-gradient(
+            to bottom,
+            #ff6b5e,
+            #d83a2e
+        );
+
+    color: white;
+
+    border:
+        1px solid #ffffff;
+
+    width: 22px;
+    height: 22px;
+
+    border-radius: var(--radius-sm);
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+.close-btn:hover {
+    background: #963939;
+}
+
+.close-btn:active {
+    border-style: inset;
+}
+
+#draw-window {
+    height: clamp(280px, 45vh, 380px); /* taller ONLY for drawing app */
+}
+
+#links-window {
+    height: clamp(180px, 30vh, 260px);
+}
+
+#info-window {
+    height: clamp(180px, 30vh, 260px);
+}
+
+#games-window {
+    height: clamp(160px, 28vh, 240px);
+}
