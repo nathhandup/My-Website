@@ -17,6 +17,8 @@
 
     margin: 0 auto;
 
+    padding: 0.5rem;
+
     display: flex;
 
     justify-content: center;
@@ -169,4 +171,23 @@
 
 .blur {
     filter: blur(3px);
+}
+
+#task-bar {
+    display: flex;
+}
+
+#task-nav-button img {
+    
+    margin: 1rem;
+
+    height: clamp(28px, 4vw, 35px);
+
+    width: auto;
+
+    image-rendering: pixelated;
+
+    flex-shrink: 0;
+
+    transition: transform 0.12s;
 }
