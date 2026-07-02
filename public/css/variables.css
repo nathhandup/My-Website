@@ -1,13 +1,17 @@
 :root {
     --color-page-bg-top: #006bde;
     --color-page-bg-middle: #17113d;
-    --color-page-bg-bottom: #006bde;
+    --color-page-bg-bottom: #005aba;
 
     --color-window-top: #9201c3;
     --color-window-middle: #24081f;
     --color-window-bottom: #693c7b;
 
-    --color-border: #7aa6e0;
+    --task-bar-gradient-top: #6801c3;
+    --task-bar-gradient-middle: #be86b5;
+    --task-bar-gradient-bottom: #6400c2;
+
+    --color-border: #2e1c33;
 
     /* this is the main window bg */
     --color-paper: #ffffff;
@@ -34,8 +38,8 @@
         8px 8px 20px rgba(0, 0, 0, 0.46);
 
     --shadow-paper:
-        0 0 0 2px rgb(126, 120, 186),
-        8px 8px 18px rgba(0,0,0,.3);
+        0 0 0 2px rgba(19, 0, 103, 0.43),
+        8px 8px 18px rgba(21, 0, 55, 0.52);
 
     --font-main: "VT323", monospace;
     --font-title: "Retro Floral";     

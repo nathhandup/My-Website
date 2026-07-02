@@ -21,11 +21,10 @@
 
     gap: var(--space-sm);
 
-    border-top:
-        1px solid #8fc3ff;
+    border:
+        2px solid #0000005d;
 
-    border-bottom:
-        2px solid #163f91;
+    
 }
 
 #navbar a {

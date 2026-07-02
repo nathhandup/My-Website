@@ -3,6 +3,7 @@
     margin: 2rem 2rem 2rem 1.5rem;
     flex: 1;
     height: 80vh;
+    overflow-y: hidden;
 }
 
 #main-layout {
@@ -13,12 +14,10 @@ header {
     display: flex;
     flex-direction: column;
     text-align: center;
-    background-color: #ffffffee;
 
     margin-top: var(--space-xl);
     margin-left: var(--space-lg);
 
-    border-bottom: 2px solid #7c7358;
     padding-top: 15px;
     padding-bottom: 15px;
     width: clamp(180px, 18vw, 260px);
@@ -32,6 +31,25 @@ header {
     font-weight: normal;
     color: var(--color-text-dark);
     letter-spacing: 2px;
+}
+
+#task-bar {
+    display:flex;
+    width: 97vw;
+    margin:auto;
+
+    background: 
+        radial-gradient(circle, 
+            var(--task-bar-gradient-top),
+            var(--task-bar-gradient-middle),
+            var(--task-bar-gradient-bottom)
+        );
+    
+    border: 3px solid #0000007a;
+
+    box-shadow:
+    0 0 0 2px rgba(19, 0, 103, 0.43),
+        8px 8px 18px rgba(21, 0, 55, 0.52);
 }
 
 footer {

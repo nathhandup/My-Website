@@ -20,7 +20,8 @@ body {
         );
 
     color: var(--color-text);
-    font-family: var(--font-main);
+    /* I CHANGED THE FONT DONT FORGET ABOUT THIS, DOES NOT ADHERE TO VARIABLE */
+    font-family: helvetica, sans-serif;
     font-size: clamp(0.95rem, 1vw, 1rem);
     overflow: hidden;
 }
