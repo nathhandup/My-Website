@@ -1,10 +1,23 @@
 /* ---- gif strip ---- */
 
-.gif-strip {
+.paper-main-box {
+    background: var(--color-paper);
 
-    width: min(100%, 820px); 
+    border:
+        2px solid var(--color-border);
+
+    box-shadow:
+        var(--shadow-paper);
+    
+    padding: clamp(0.5rem, 3vw, 1rem);
+}   
+
+.gif-strip {
+    /*width: min(100%, 820px);*/ 
 
     margin: 0 auto;
+
+    padding: 0.5rem;
 
     display: flex;
 
@@ -13,9 +26,7 @@
 
     gap: 6px;
 
-    padding-bottom: var(--space-md);
-
-    overflow-x: auto;
+    overflow-x: hidden;
 }
 
 .gif-strip a {
@@ -160,4 +171,23 @@
 
 .blur {
     filter: blur(3px);
+}
+
+#task-bar {
+    display: flex;
+}
+
+.task-nav-button img {
+    
+    margin: 1rem;
+
+    height: clamp(1rem, 5vh, 5rem);
+
+    width: auto;
+
+    image-rendering: pixelated;
+
+    flex-shrink: 0;
+
+    transition: transform 0.12s;
 }

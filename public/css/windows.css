@@ -31,9 +31,9 @@
      background:
         linear-gradient(
             to bottom,
-            var(--color-window-blue-light),
-            #2f6fdf 45%,
-            var(--color-window-blue)
+            var(--color-window-top),
+            var(--color-window-middle),
+            var(--color-window-bottom)
         );
 
     color: white;
