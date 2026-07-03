@@ -8,8 +8,8 @@
 
     box-shadow:
         var(--shadow-paper);
-
-    padding: clamp(1rem, 3vw, 1.5rem);
+    
+    padding: clamp(0.5rem, 3vw, 1rem);
 }   
 
 .gif-strip {
@@ -177,11 +177,11 @@
     display: flex;
 }
 
-#task-nav-button img {
+.task-nav-button img {
     
     margin: 1rem;
 
-    height: clamp(28px, 4vw, 35px);
+    height: clamp(1rem, 5vh, 5rem);
 
     width: auto;
 

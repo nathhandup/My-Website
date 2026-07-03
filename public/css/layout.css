@@ -1,16 +1,27 @@
 #site-wrapper {
-    width: clamp(320px, 90vw, 720px);
-    margin: 2rem 2rem 2rem 1.5rem;
+    margin-top:2rem;
+    margin-right: clamp(0.5rem, 5vw, 2rem);
+    margin-bottom:2rem;
+    margin-left:1rem;
     flex: 1;
-    height: 80vh;
     overflow-y: hidden;
+    height: clamp(10rem,70vh, 50rem);
+    width: clamp(75rem, 65vw, 100rem);
 }
 
 #main-layout {
     display:flex;
+    align-items:flex-start;
+    margin:auto;
+    height: clamp(10rem, 80vh, 50rem);
+    width: clamp(10rem, 70vw, 125rem);
 }
 
 header {
+    
+    margin-top:2rem;
+    margin-bottom:2rem;
+    margin-left:1rem;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -18,25 +29,31 @@ header {
     margin-top: var(--space-xl);
     margin-left: var(--space-lg);
 
-    padding-top: 15px;
-    padding-bottom: 15px;
     width: clamp(180px, 18vw, 260px);
-    height: 80vh;
+    height: clamp(10rem,70vh, 50rem);
+
 }
 
 #site-title {
-    margin: 0;
+    margin-top: clamp(0.5rem, 1vh, 2rem);
+    margin-bottom: clamp(0.5rem, 1vh, 2rem);
+    margin-left:auto;
+    margin-right:auto;
     font-family: var(--font-title);
-    font-size: 2.5rem;
-    font-weight: normal;
+    font-size: clamp(1rem, 2vw, 5rem);
+    font-weight:bolder;
     color: var(--color-text-dark);
-    letter-spacing: 2px;
+    letter-spacing:4px;
 }
 
 #task-bar {
     display:flex;
     width: 97vw;
-    margin:auto;
+    margin-left: auto;
+    margin-right: auto;
+
+    height: clamp(1rem, 10vh, 5rem);
+    width: clamp(10rem, 70vw, 125rem);
 
     background: 
         radial-gradient(circle, 
@@ -45,7 +62,7 @@ header {
             var(--task-bar-gradient-bottom)
         );
     
-    border: 3px solid #0000007a;
+    border: 5px solid #0000007a;
 
     box-shadow:
     0 0 0 2px rgba(19, 0, 103, 0.43),
